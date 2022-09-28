@@ -1,4 +1,7 @@
 install.packages("rstudioapi")
+install.packages("XML")      
+install.packages("data.table")
+install.packages("stringr")
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 getwd()
 
@@ -92,3 +95,4 @@ for(i in 1:length(url_list)){   # 요청목록(url_list) 반복
   write.csv(apt_bind, path)     # csv 저장
   msg <- paste0("[", i,"/",length(url_list), "] 수집한 데이터를 [", path,"]에 저장 합니다.") # 알림 메시지
   cat(msg, "\n\n")
+}
